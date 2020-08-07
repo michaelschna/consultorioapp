@@ -67,19 +67,21 @@
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
-          <li><a href="#about">Acerca de</a></li>
-          <li><a href="#services">Servicios</a></li>
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
+              <li><a href="#about">Acerca de</a></li>
+              <li><a href="#services">Servicios</a></li>
 
-          <li><a href="#doctors">Doctores</a></li>
+              <li><a href="#doctors">Doctores</a></li>
 
-          <li><a href="#gallery">Promociones</a></li>
-          <li><a href="#contact">Contactenos</a></li>
-
-        </ul>
-      </nav><!-- .nav-menu -->
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url "promociones" %}">Promociones</a>
+              </li>
+              <li><a href="#contact">Contactenos</a></li>
+{% block headers %} {% endblock %}
+            </ul>
+        </nav><!-- .nav-menu -->
 
       <a href="#appointment" class="appointment-btn scrollto">Haga una cita con nosotros</a>
 
@@ -627,7 +629,7 @@
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
           <a href="https://www.facebook.com/rocio.gavilanes.756" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
           <a href="https://www.instagram.com/family_dental_solution" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
- 
+
           <a href="https://api.whatsapp.com/send?phone=+593996696292" target="_blank" class="whatsapp"><i class="icofont-whatsapp"></i></a>
       </div>
     </div>

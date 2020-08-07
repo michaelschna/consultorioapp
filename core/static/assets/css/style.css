@@ -206,6 +206,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu ul {
+  display: none;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -216,6 +217,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu > ul > li {
+  display: none;
   position: relative;
   white-space: nowrap;
   padding: 8px 0 8px 20px;
@@ -233,6 +235,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  display: none;
   color: #1977cc;
   border-color: #1977cc;
 }
@@ -314,6 +317,9 @@ h1, h2, h3, h4, h5, h6 {
     content: "\ea9d";
   }
 }
+
+
+
 
 /* Get Startet Button */
 .appointment-btn {
