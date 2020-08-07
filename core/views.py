@@ -8,6 +8,9 @@ def index(request, plantilla="index.html"):
 def promociones(request, plantilla="promociones.html"):
     return render(request, plantilla)
 
+def servicios(request, plantilla="servicios.html"):
+    return render(request, plantilla)
+
 
 
 
