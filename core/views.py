@@ -14,6 +14,10 @@ def servicios(request, plantilla="servicios.html"):
 def doctores(request, plantilla="doctores.html"):
     return render(request, plantilla)
 
+def acerca(request, plantilla="acerca.html"):
+    return render(request, plantilla)
+
+
 
 
 
