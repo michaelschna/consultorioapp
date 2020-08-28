@@ -1,3 +1,4 @@
+{% extends "promociones.html" %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -96,79 +97,24 @@
     </div>
   </header><!-- End Header -->
 
+{% block content %}
+    <h2>Crear medico</h2>
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container">
+    <form method="POST">
+        {% csrf_token %}
+            {{ medicos.as_p }}
+        <button type="submit" >Crear Medico</button>
+        <button type="reset">Limpiar</button>
 
-        <div class="section-title">
-          <h2>PROMOCIONES</h2>
-          <p>PROMOCIONES DEL MES</p>
-        </div>
-      </div>
+    </form>
 
-      <div class="container-fluid">
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro1.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro1.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro2.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro2.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro3.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro3.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro4.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro4.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro5.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro5.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro6.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro6.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
+{{ mensaje }}
 
 
-              </a>
-            </div>
-          </div>
+{% endblock %}
 
-        </div>
-
-      </div>
-    </section><!-- End Gallery Section -->
-    <a class="nav-link" href="{% url 'crearpromociones' %}">Agregar Promociones</a>
   <!-- Contenido -->
+
 
 
   <!-- ======= Footer ======= -->
