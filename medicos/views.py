@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import MedicosForm, Medicos
 
 # Create your views here.
-def medico(request, plantilla="medico.html"):
+def medico(request, plantilla="medicos.html"):
     medicos = Medicos.objects.all()
     data = {
         'medico':medicos
@@ -11,7 +11,7 @@ def medico(request, plantilla="medico.html"):
 
 
 #pagina de crear o insertar INSERT
-def crearmedicos(request, template_name="crearmedico.html"):
+def crearmedicos(request, template_name="crearmedicos.html"):
 
     if request.method == "POST":
         form = MedicosForm(request.POST)
