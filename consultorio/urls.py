@@ -26,7 +26,8 @@ urlpatterns = [
     path('doctores', views.doctores, name="doctores"),
     path('acerca', views.acerca, name="acerca"),
     path('medicos/', include('medicos.urls'),name="medicos"),
-    path('promociones/', include('promociones.urls'),name="promociones")
+
+    path('servicios/', include('servicios.urls'),name="servicios")
     #path('crearmedico/', include('crearmedicos'),name="crearmedicos")
 ]
 

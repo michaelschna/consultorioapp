@@ -4,5 +4,4 @@ from medicos import views
 urlpatterns = [
     path('medicos/',views.medico, name="medicos"),
     path('crearmedicos/', views.crearmedicos, name="crearmedicos"),
-
 ]
