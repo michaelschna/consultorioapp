@@ -67,7 +67,7 @@
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <nav class="nav-menu d-none d-lg-block">
+       <nav class="nav-menu d-none d-lg-block">
             <ul>
               <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
               <li><a href="#about">Acerca de</a></li>
@@ -92,84 +92,47 @@
               <a href="#appointment" class="appointment-btn scrollto">Haga una cita con nosotros</a>
 
 
-
     </div>
   </header><!-- End Header -->
 
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>PROMOCIONES</h2>
-          <p>PROMOCIONES DEL MES</p>
-        </div>
-      </div>
-
-      <div class="container-fluid">
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro1.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro1.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro2.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro2.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro3.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro3.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro4.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro4.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro5.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro5.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro6.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro6.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
 
 
-              </a>
-            </div>
-          </div>
+   <table>
+        <tr>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Email</th>
+            <th>Sexo</th>
+            <th>Opciones</th>
+        </tr>
 
+        {% for p in medico %}
+
+        <tr>
+            <td>{{ p.apellido }}</td>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.edad }}</td>
+            <td>{{ p.email }}</td>
+            <td>{{ p.sexo }}</td>
+            <td>
+                <a href="">Modificar</a>
+            </td>
+        </tr>
+
+         {% endfor %}
+    </table>
         </div>
 
       </div>
-    </section><!-- End Gallery Section -->
-    <a class="nav-link" href="{% url 'crearpromociones' %}">Agregar Promociones</a>
+    </section><!-- End Doctors Section -->
+
+
+
   <!-- Contenido -->
 
+    {% block content %}  {% endblock %}
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

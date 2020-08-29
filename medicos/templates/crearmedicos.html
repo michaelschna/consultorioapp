@@ -1,3 +1,5 @@
+{% extends "doctores.html" %}
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -41,24 +43,6 @@
 
 <body>
 
-  <!-- ======= Top Bar ======= -->
-  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
-    <div class="container d-flex">
-      <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">familydentalsolution@gmail.com  </a>
-        <i class="icofont-phone"></i> 0996696292
-        <i class="icofont-google-map"></i> Sauces 3 Mz 117 V.30 Guayaquil-Ecuador
-      </div>
-
-
-     <div class="social-links">
-        <a href="https://www.facebook.com/rocio.gavilanes.756" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="https://www.instagram.com/family_dental_solution" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=+593996696292" target="_blank" class="whatsapp"><i class="icofont-whatsapp"></i></a>
-      </div>
-    </div>
-  </div>
-
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
@@ -67,20 +51,6 @@
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <nav class="nav-menu d-none d-lg-block">
-            <ul>
-              <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
-              <li><a href="#about">Acerca de</a></li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'servicios' %}">Servicios</a></li>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'doctores' %}">Doctores</a></li>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url "promociones" %}">Promociones</a>
-              </li>
-              <li><a href="#contact">Contactenos</a></li>
 {% block headers %} {% endblock %}
             </ul>
         </nav><!-- .nav-menu -->
@@ -92,84 +62,36 @@
               <a href="#appointment" class="appointment-btn scrollto">Haga una cita con nosotros</a>
 
 
-
     </div>
   </header><!-- End Header -->
 
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>PROMOCIONES</h2>
-          <p>PROMOCIONES DEL MES</p>
-        </div>
-      </div>
-
-      <div class="container-fluid">
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro1.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro1.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro2.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro2.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro3.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro3.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro4.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro4.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro5.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro5.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="{% static 'assets/img/gallery/pro6.jpeg'%}" class="venobox" data-gall="gallery-item">
-                <img src="{% static 'assets/img/gallery/pro6.jpeg'%}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
 
 
-              </a>
-            </div>
-          </div>
 
-        </div>
 
-      </div>
-    </section><!-- End Gallery Section -->
-    <a class="nav-link" href="{% url 'crearpromociones' %}">Agregar Promociones</a>
-  <!-- Contenido -->
 
+
+
+
+
+
+
+{% block content %}
+    <h2>Crear medico</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+            {{ medicos.as_p }}
+        <button type="submit" >Crear Medico</button>
+        <button type="reset">Limpiar</button>
+
+    </form>
+
+{{ mensaje }}
+
+
+{% endblock %}
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
