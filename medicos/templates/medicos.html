@@ -1,3 +1,5 @@
+{% extends "crearmedicos.html" %}
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -96,6 +98,7 @@
   </header><!-- End Header -->
 
 
+    {% block content %}
 
 
    <table>
@@ -116,13 +119,15 @@
             <td>{{ p.edad }}</td>
             <td>{{ p.email }}</td>
             <td>{{ p.sexo }}</td>
-            <td>
-                <a href="">Modificar</a>
+            <td><a class="nav-link" href="{% url 'modificarmedicos' p.id %}">Modificar</a></td>
+            <td><a class="nav-link" href="{% url 'eliminarmedicos' p.id %}">Eliminar</a></td>
+
             </td>
         </tr>
 
          {% endfor %}
     </table>
+  {% endblock %}
         </div>
 
       </div>
@@ -132,7 +137,6 @@
 
   <!-- Contenido -->
 
-    {% block content %}  {% endblock %}
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

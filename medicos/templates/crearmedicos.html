@@ -79,14 +79,16 @@
 
 {% block content %}
     <h2>Crear medico</h2>
-
-    <form method="POST">
+    <form method="POST" action = "{% url 'crearmedicos' %}">
         {% csrf_token %}
-            {{ medicos.as_p }}
-        <button type="submit" >Crear Medico</button>
-        <button type="reset">Limpiar</button>
+            {{ form.as_p }}
+        <input type="submit" value="Crear medico" />
+
+
 
     </form>
+
+
 
 {{ mensaje }}
 
