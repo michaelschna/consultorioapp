@@ -1,4 +1,4 @@
-{% extends "doctores.html" %}
+{% extends "servicios.html" %}
 
 {% load static %}
 
@@ -78,12 +78,13 @@
 
 
 {% block content %}
-    <h2>Crear medico</h2>
+    <h2>Crear servicio</h2>
 
     <form method="POST">
         {% csrf_token %}
-            {{ form.as_p }}
-        <button type="submit" >Agregar Medico</button>
+            {{ servicios.as_p }}
+        <button type="submit" >Agregar servicios</button>
+        <button type="reset">Limpiar</button>
 
     </form>
 

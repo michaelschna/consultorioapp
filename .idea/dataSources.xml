@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db" uuid="ce769edd-d174-4b0f-a1ff-7aad9b5ee8eb">
+    <data-source source="LOCAL" name="db" uuid="4b0b56d3-eb26-4e2c-9068-305ca7d4d64a">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\PIRECUASA\PycharmProjects\consultorioapp\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Limon\PycharmProjects\consultorioapp\db.sqlite3</jdbc-url>
       <libraries>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.31.1/license.txt</url>
@@ -15,15 +15,12 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="db [2]" uuid="f9d23dd1-9455-43ef-a7c9-d35f47fcf2dc">
+    <data-source source="LOCAL" name="db [2]" uuid="008a9bba-5dbf-4c1c-aa87-9890a33fccb9">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Steven\PycharmProjects\consultorioapp\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Vanessa\Desktop\consultorioapp\db.sqlite3</jdbc-url>
       <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.31.1/sqlite-jdbc-3.31.1.jar</url>
-        </library>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.31.1/license.txt</url>
         </library>
