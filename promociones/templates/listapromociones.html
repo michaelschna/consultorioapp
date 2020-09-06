@@ -1,0 +1,23 @@
+{% extends "crearpromociones.html" %}
+{% load static %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Opciones</th>
+        </tr>
+
+        {% for p in promociones %}
+
+        <tr>
+            <td>{{ p.descripcion }}</td>
+            <td>{{ p.precio }}</td>
+            <td><a class="nav-link" href="{% url 'modificarpromociones' p.id %}">Modificar</a></td>
+            <td><a class="nav-link" href="{% url 'eliminarpromociones' p.id %}">Eliminar</a></td>
+        </tr>
+
+         {% endfor %}
+    </table>
+  {% endblock %}

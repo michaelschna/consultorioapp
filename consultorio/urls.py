@@ -16,18 +16,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from core import views
+from django.contrib.auth import authenticate
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login as do_login
+from django.contrib.auth import logout as do_logout
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+
     path('', views.index, name="index"),
     path('promociones', views.promociones, name="promociones"),
     path('servicios', views.servicios, name="servicios"),
     path('doctores', views.doctores, name="doctores"),
     path('acerca', views.acerca, name="acerca"),
     path('medicos/', include('medicos.urls'),name="medicos"),
+    path('usuarios/', include('usuarios.urls'), name="usuarios"),
+    path('admin/', admin.site.urls),
 
-    path('servicios/', include('servicios.urls'),name="servicios")
-    #path('crearmedico/', include('crearmedicos'),name="crearmedicos")
 ]
 

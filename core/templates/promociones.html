@@ -167,9 +167,11 @@
 
       </div>
     </section><!-- End Gallery Section -->
-    <a class="nav-link" href="{% url 'crearpromociones' %}">Agregar Promociones</a>
+            <a class="nav-link" href="{% url 'crearpromociones' %}">Crear promociones</a>
+            <a class="nav-link" href="{% url 'listapromociones' %}">Lista de promociones</a>
   <!-- Contenido -->
 
+    {% block content %}  {% endblock %}
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

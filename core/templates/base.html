@@ -63,14 +63,20 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="{% url 'index' %}">Family Dental Solution</a></h1>
+        <h1 class="logo mr-auto"><a href="{% url 'index' %}">Family Dental Solution</a></h1>
+        <a class="navbar-brand" href="{%  url 'index' %}"> Bienvenido {{ request.user.username }}  </a>
+        <a class="navbar-brand" href="{%  url 'logout' %}">Salir</a>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-       <nav class="nav-menu d-none d-lg-block">
+
+
+        <nav class="nav-menu d-none d-lg-block">
             <ul>
               <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
-              <li><a href="#about">Acerca de</a></li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'acerca' %}">Acerca de nosotros</a></li>
+              </li>
               <li class="nav-item">
                   <a class="nav-link" href="{% url 'servicios' %}">Servicios</a></li>
               </li>
@@ -91,72 +97,8 @@
               <a href="#contact">Contactenos</a>
               <a href="#appointment" class="appointment-btn scrollto">Haga una cita con nosotros</a>
 
-
     </div>
   </header><!-- End Header -->
-
-
-
-
-    <!-- ======= Doctors Section ======= -->
-    <section id="doctors" class="doctors">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Doctores</h2>
-          <p>Nuestros odontólogos diagnostican, tratan y previenen caries dentales y enfermedades de las encías. Realizan chequeos y revisiones regulares, agujerean, preparan y rellenan cavidades, dientes, dentaduras postizas y otros aparatos, a la vez que ajustan, equilibran y pulen dientes, extraen dientes con caries y asesoran a sus pacientes sobre la higiene bucal. También corrigen irregularidades, tales como dientes torcidos, especialmente en niños. </p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="{% static 'assets/img/doctors/doctor.jpg'%}" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Dr. Tomas Ubilla Gavilanes</h4>
-                <span>Odontologo General</span>
-                <p></p>
-                <div class="social">
-                    <a href="https://www.facebook.com/rocio.gavilanes.756" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
-                    <a href="https://www.instagram.com/family_dental_solution" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=+593996696292" target="_blank" class="whatsapp"><i class="icofont-whatsapp"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="{% static 'assets/img/doctors/doctor2.jpg'%}" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Maria Gavilanez</h4>
-                <span>Odontologa</span>
-                <p></p>
-                <div class="social">
-                    <a href="https://www.facebook.com/rocio.gavilanes.756" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
-                    <a href="https://www.instagram.com/family_dental_solution" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=+593996696292" target="_blank" class="whatsapp"><i class="icofont-whatsapp"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-            <a class="nav-link" href="{% url 'crearmedicos' %}">Crear medico</a>
-            <a class="nav-link" href="{% url 'medicos' %}">Lista de medicos</a>
-
-            <a class="nav-link" href="{% url 'crearusuario' %}">Crear usuario</a>
-            <a class="nav-link" href="{% url 'usuario' %}">Lista de usuarios</a>
-
-
-
-
-
-
-        </div>
-
-      </div>
-    </section><!-- End Doctors Section -->
-
 
 
   <!-- Contenido -->
