@@ -43,5 +43,11 @@ urlpatterns = [
     path('crearexamen/', views.crearexamen, name="crearexamen"),
     path('modificarexamen/<int:pk>', views.modificarexamen, name="modificarexamen"),
     path('eliminarexamen/<int:pk>', views.eliminarexamen, name="eliminarexamen"),
+
+    # url de consulta
+    path('consulta/', views.consultarconsulta, name="consulta"),
+    path('crearconsulta/', views.crearconsulta, name="crearconsulta"),
+    path('modificarconsulta/<int:pk>', views.modificarconsulta, name="modificarconsulta"),
+    path('eliminarconsulta/<int:pk>', views.eliminarconsulta, name="eliminarconsulta"),
 ]
 

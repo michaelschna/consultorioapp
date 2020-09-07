@@ -371,3 +371,56 @@ def eliminarexamen(request, pk, plantilla="eliminarexamen.html"):
         form = ExamenForm(request.POST or None, instance=examen)
 
     return render(request, plantilla, {'form': form})
+
+
+#consulta
+def consultarconsulta(request, plantilla="consultarconsulta.html"):
+    consulta = Consulta.objects.all()
+    data = {
+        'consulta':consulta
+    }
+    return render(request, plantilla, data)
+
+
+#pagina de crear o insertar INSERT
+def crearconsulta(request, plantilla="crearconsulta.html"):
+
+    if request.method == "POST":
+        form = ConsultaForm((request.POST or None))
+        if form.is_valid():
+            form.save()
+            return redirect('consulta')
+    else:
+        form = ConsultaForm
+
+    return render(request, plantilla, {'form': form})
+
+#pagina de modificar
+def modificarconsulta(request, pk, plantilla="modificarconsulta.html"):
+    if request.method == "POST":
+        consulta = get_object_or_404(Consulta, pk=pk)
+        form = ConsultaForm(request.POST or None, instance=consulta)
+        if form.is_valid():
+            form.save()
+        return redirect('consulta')
+    else:
+        consulta = get_object_or_404(Consulta, pk=pk)
+        form = ConsultaForm(request.POST or None, instance=consulta)
+
+
+
+    return render(request, plantilla, {'form': form})
+#pagina de eliminar
+def eliminarconsulta(request, pk, plantilla="eliminarconsulta.html"):
+
+    if request.method == "POST":
+        form = ConsultaForm((request.POST or None))
+        consulta = get_object_or_404(Consulta, pk=pk)
+        if form.is_valid():
+            consulta.delete()
+            return redirect('consulta')
+    else:
+        consulta = get_object_or_404(Consulta, pk=pk)
+        form = ConsultaForm(request.POST or None, instance=consulta)
+
+    return render(request, plantilla, {'form': form})
