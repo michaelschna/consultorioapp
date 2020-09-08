@@ -5,7 +5,7 @@ from .views import  promociones
 urlpatterns = [
 
 
-    path('promociones/', promociones, name="promociones"),
+    #path('promociones/', promociones, name="promociones"),
 
 ]
 

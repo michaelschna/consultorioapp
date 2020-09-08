@@ -86,7 +86,7 @@
               <li class="nav-item">
                   <a class="nav-link" href="{% url "promociones" %}">Promociones</a>
               </li>
-              <li><a href="#contact">Contactenos</a></li>
+              <li><a class="nav-link" href="{% url "contacto"%}">Contactenos</a></li>
 {% block headers %} {% endblock %}
             </ul>
         </nav><!-- .nav-menu -->
@@ -94,9 +94,8 @@
               <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
               <a class="nav-link" href="{% url 'doctores' %}">Doctores</a>
               <a class="nav-link" href="{% url "promociones" %}">Promociones</a>
-              <a href="#contact">Contactenos</a>
+              <a class="nav-link" href="{% url "contacto"%}">Contactenos</a>
               <a href="#appointment" class="appointment-btn scrollto">Haga una cita con nosotros</a>
-
     </div>
   </header><!-- End Header -->
 

@@ -15,7 +15,8 @@ def promociones(request, plantilla="promociones.html"):
 def servicios(request, plantilla="servicios.html"):
     return render(request, plantilla)
 
-
+def contacto(request, plantilla="contacto.html"):
+    return render(request, plantilla)
 
 def doctores(request, plantilla="doctores.html"):
     return render(request, plantilla)

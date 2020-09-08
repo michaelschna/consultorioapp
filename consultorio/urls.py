@@ -29,6 +29,8 @@ urlpatterns = [
     path('servicios', views.servicios, name="servicios"),
     path('doctores', views.doctores, name="doctores"),
     path('acerca', views.acerca, name="acerca"),
+    path('contacto', views.contacto, name="contacto"),
+    #path('cita/',views.cita,name="cita"),
     path('medicos/', include('medicos.urls'),name="medicos"),
     path('usuarios/', include('usuarios.urls'), name="usuarios"),
     path('admin/', admin.site.urls),

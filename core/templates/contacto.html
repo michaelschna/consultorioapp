@@ -67,12 +67,10 @@
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <nav class="nav-menu d-none d-lg-block">
+       <nav class="nav-menu d-none d-lg-block">
             <ul>
               <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'acerca' %}">Acerca de</a></li>
-              </li>
+              <li><a href="#about">Acerca de</a></li>
               <li class="nav-item">
                   <a class="nav-link" href="{% url 'servicios' %}">Servicios</a></li>
               </li>
@@ -100,126 +98,83 @@
 
 
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container-fluid">
-
-
-
-   <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
+<!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
       <div class="container">
 
-        <div class="row">
-          <div class="col-xl-4 d-flex align-items-stretch">
-            <div class="content">
-              <h3>Quienes somos</h3>
-              <p>
-                Nuestra labor como trabajadores de salud odontológica, prestando servicios a la comunidad desde hace 7 años, contando con la experiencia que se requiere en el ámbito profesional, tanto a servicios privados como públicos, trabajando con ahínco y dedicación, con un equipo altamente cualificado, dispuestos a ofrecer un correcto diagnóstico y tratamiento a nuestros pacientes, mediante la aplicación de procedimientos actualizados y materiales de alta calidad, abarcando todos los campos de la odontología, como endodoncia, estética, prótesis, periodoncia, ortodoncia e implantes dentales.
-              </p>
-              <div class="text-center">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-8 d-flex align-items-stretch">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-receipt"></i>
-                    <h4>MISION</h4>
-                    <p>Estamos comprometidos con el cuidado de la salud oral de nuestros pacientes, proporcionando los más altos estándares en el cuidado odontológico, ya sea preventivo, restaurativo y estético con el fin de mejorar la calidad de vida de nuestros pacientes.</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-cube-alt"></i>
-                    <h4>VISION</h4>
-                    <p>Buscamos ser la más completa clínica de Rehabilitación Oral Integral, que cuente con técnicas avanzadas enfocadas en nuestros pacientes, lo que nos permita ser líderes en la prestación de nuestros servicios.</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-images"></i>
-                    <h4>EVOLUCION</h4>
-                    <p>Buscamos permanentemente el constante desarrollo, la actualización científica y la adquisición de tecnología actual, con el propósito de brindar al paciente una atención integral que logre el éxito de los tratamientos.</p>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End .content-->
-          </div>
+        <div class="section-title">
+          <h2>Contactanos</h2>
+          <p>Visítenos, estamos ubicados en Sauces 3, Av. Juan María Egas. Manzana 117, Villa 30. Nuestro horario de consulta es de lunes a sábados de 8:00 a 17:00, puedes llamarnos y separar tu cita con anterioridad al 0996696292, somos flexibles con el horario de nuestros pacientes, te esperamos.</p>
         </div>
-
       </div>
-    </section><!-- End Why Us Section -->
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+      <div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1993.52947698889!2d-79.88861216417196!3d-2.131035999858676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMDcnNTEuNyJTIDc5wrA1MycxNi42Ilc!5e0!3m2!1ses!2sec!4v1596423206733!5m2!1ses!2sec" width="1250" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+
       <div class="container">
+        <div class="row mt-5">
 
-        <div class="owl-carousel testimonials-carousel">
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Estamos ubicados:</h4>
+                <p>Sauces 3, Av. Juan María Egas. Manzana 117, Villa 30.</p>
+              </div>
 
-          <div class="testimonial-wrap">
-            <div class="testimonial-item">
-              <img src="{% static 'assets/img/testimonials/testimonio1.jpg'%}" class="testimonial-img" alt="">
-              <h3>Milena Larrea</h3>
-              <h4>Abogada</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                100% recomendada muy agradecida por sus servicios y trato q es excelente…
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>familydentalsolution@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Llamenos:</h4>
+                <p>0996696292</p>
+              </div>
+
             </div>
+
           </div>
 
-          <div class="testimonial-wrap">
-            <div class="testimonial-item">
-              <img src="{% static 'assets/img/testimonials/testimonio2.jpg'%}" class="testimonial-img" alt="">
-              <h3>Bryan Limon</h3>
-              <h4>Periodista</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                No tenemos palabras de agradecimiento para los doctores no solo por su profesionalismo sino por su calidad humana.                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Tu mensaje a sido enviado. Gracias!</div>
+              </div>
+              <div class="text-center"><button type="submit">enviar mensaje</button></div>
+            </form>
+
           </div>
-
-          <div class="testimonial-wrap">
-            <div class="testimonial-item">
-              <img src="{% static 'assets/img/testimonials/testimonio3.jpg'%}" class="testimonial-img" alt="">
-              <h3>Jazmin Muñoz</h3>
-              <h4>Profesora</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Estoy muy feliz de poder contarles que todo está excelente con mi trabajo dental realizado en Family Dental Solution. No he tenido problemas con mis extracciones ni con mis implantes. Mis prótesis dentales son perfectas. Quiero dar las gracias a sus compañeros de trabajo por su amabilidad y excelente servicio.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-
-          <div class="testimonial-wrap">
-            <div class="testimonial-item">
-              <img src="{% static 'assets/img/testimonials/testimonio4.jpg'%}" class="testimonial-img" alt="">
-              <h3>Michael Schnabel</h3>
-              <h4>Actor</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Me gustaría extender un agradecimiento especial al Dr. Tomas Ubillas, el odontologo que logró estos increíbles resultados que ahora puedo mostrar.
-
-                Para cualquier persona que esté en busca de obtener una atención y resultados de alta calidad, les recomiendo que visiten Family Dental Solution para lograr una sonrisa espectacular.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-
 
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section><!-- End Contact Section -->
 
-
-  </main><!-- End #main -->
 
 
   <!-- Contenido -->
